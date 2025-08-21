@@ -1,0 +1,129 @@
+
+* {
+  color: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+    height: 100vh;
+    width: 100vw;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(145deg, black, white);
+  font-family: sans-serif;
+}
+
+/* Container styling */
+#container {
+  border: 0.1em solid black;
+  min-height: 20vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(99, 98, 97);
+  border-radius: 2em;
+  padding: 1em;
+  gap: 1em;
+  flex-grow: 0.2;
+}
+.head {
+  display: flex;
+  justify-content: center;   /* center h1 */
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 1em;
+}
+
+h1 {
+  margin: 0;
+}
+
+#clear {
+  position: absolute;
+  right: 1em;
+  color: black;
+  height: 50%;
+  width:auto;
+}
+#tick{
+    background-color: black;
+    font-size: 1.3em;
+    border-radius: 0.2em solid black;
+}
+/* Task styling */
+input{
+    border:none;
+    height:4em;
+    width: 80%;
+    border-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    font-size: 2rem;
+}
+input:focus{
+    outline: none;
+}
+.task,.task-input,input{
+    background-color: black; 
+    font-size: 1.1em;
+   
+}
+.parent{
+    width: 91%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+   gap:0;
+    align-items: stretch;  /* let children grow in height */
+}
+.cross{
+    background-color: black;
+    font-size: 1.3rem;
+    margin-right: 0;
+    border:0.2em solid black ;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em; 
+}
+.task,.task-input{
+    /* border:0.1em solid white; */
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em ;
+    min-height:4em;
+    width: 80%;
+    margin-left: 0;
+      padding-left: 0.5em;
+     display: flex;
+  align-items: center; 
+  justify-content: flex-start;
+}
+.task{
+   word-break: break-word;   /* force line break on long words */
+  white-space: pre-wrap;    /* allow wrapping and respect spaces */
+  height: auto;
+  display: block; 
+    display: flex;
+  align-items: center; 
+  justify-content: flex-start;
+
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  #container {
+    width: 80vw;
+  }
+  input{
+    height: 3em;
+  }
+  .task,.task-input{
+    min-height:3em;
+    font-size: 1em;
+  }
+}
